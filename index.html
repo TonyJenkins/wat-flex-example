@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma's Artisan Bakery - CV</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #faf8f5;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+
+        /* Left Sidebar Menu */
+        .sidebar {
+            flex: 0 0 280px;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #D2B48C;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 4px solid white;
+        }
+
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .nav-menu li {
+            margin-bottom: 1rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            font-weight: 400;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .contact-info {
+            margin-top: auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Right Content Area */
+        .main-content {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #8B4513;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #D2B48C;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #A0522D;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: #F5DEB3;
+            color: #8B4513;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid #D2B48C;
+        }
+
+        .experience-item h4 {
+            font-family: 'Playfair Display', serif;
+            color: #8B4513;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item .date {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                flex: none;
+                padding: 1.5rem;
+            }
+            
+            .main-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .skills-grid {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar Menu -->
+        <aside class="sidebar">
+            <div class="profile-header">
+                <div class="profile-photo">🥖</div>
+                <h1 class="name">Emma Thompson</h1>
+                <p class="title">Master Craft Baker</p>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="active">About Me</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#specialties">Specialties</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                </ul>
+            </nav>
+            
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p>📧 emma@artisanbakery.com</p>
+                <p>📱 (555) 123-4567</p>
+                <p>📍 Portland, Oregon</p>
+                <p>🌐 emmasartisanbakery.com</p>
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <main class="main-content">
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <p>
+                    Welcome to my world of artisan baking! I'm Emma Thompson, a passionate craft baker with over 12 years of experience creating exceptional breads, pastries, and confections. My journey began in my grandmother's kitchen, where I learned that baking is both an art and a science—requiring precision, creativity, and above all, love.
+                </p>
+                <p>
+                    I specialize in traditional European baking techniques combined with modern flavors and presentation. Every loaf I create tells a story, from the careful selection of organic grains to the patient fermentation process that develops complex flavors and textures.
+                </p>
+                <p>
+                    My mission is to bring authentic, handcrafted baked goods to our community, using only the finest ingredients and time-honored methods that have been passed down through generations of bakers.
+                </p>
+            </section>
+
+            <section id="experience" class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <h4>Head Baker & Owner - Emma's Artisan Bakery</h4>
+                    <p class="date">2018 - Present</p>
+                    <p>Founded and operate a successful artisan bakery specializing in sourdough breads, European pastries, and seasonal confections. Manage daily production of 200+ items, lead a team of 6 bakers, and maintain relationships with local farms for ingredient sourcing.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h4>Senior Baker - Heritage Bread Company</h4>
+                    <p class="date">2015 - 2018</p>
+                    <p>Developed and perfected recipes for artisan bread lines. Trained junior bakers in traditional techniques and quality standards. Increased production efficiency by 25% while maintaining exceptional quality.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h4>Pastry Chef - The French Garden Café</h4>
+                    <p class="date">2012 - 2015</p>
+                    <p>Created daily selections of French pastries, croissants, and desserts. Collaborated with head chef on seasonal menu development and special event catering for up to 300 guests.</p>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2>Core Skills</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">Sourdough Fermentation</span>
+                    <span class="skill-tag">Laminated Doughs</span>
+                    <span class="skill-tag">Artisan Bread Making</span>
+                    <span class="skill-tag">French Pastry</span>
+                    <span class="skill-tag">Cake Decorating</span>
+                    <span class="skill-tag">Chocolate Work</span>
+                    <span class="skill-tag">Gluten-Free Baking</span>
+                    <span class="skill-tag">Recipe Development</span>
+                    <span class="skill-tag">Food Safety (HACCP)</span>
+                    <span class="skill-tag">Team Leadership</span>
+                    <span class="skill-tag">Cost Management</span>
+                    <span class="skill-tag">Local Sourcing</span>
+                </div>
+            </section>
+
+            <section id="specialties" class="section">
+                <h2>Signature Specialties</h2>
+                
+                <h3>🥖 Artisan Sourdough Collection</h3>
+                <p>Hand-crafted sourdough breads using a 150-year-old starter, including classic country loaf, seeded multigrain, and seasonal varieties featuring local ingredients.</p>
+                
+                <h3>🥐 European Pastries</h3>
+                <p>Traditional croissants, pain au chocolat, and Danish pastries made with European butter and time-honored lamination techniques.</p>
+                
+                <h3>🍰 Celebration Cakes</h3>
+                <p>Custom wedding and celebration cakes featuring hand-piped decorations, seasonal flavors, and artistic presentation that makes every occasion memorable.</p>
+                
+                <h3>🌾 Farm-to-Baker Philosophy</h3>
+                <p>Partnerships with local organic farms for flour, seasonal fruits, and herbs, ensuring the freshest ingredients and supporting our agricultural community.</p>
+            </section>
+
+            <section id="awards" class="section">
+                <h2>Recognition & Awards</h2>
+                
+                <div class="experience-item">
+                    <h4>Portland's Best Artisan Baker</h4>
+                    <p class="date">2022 & 2023</p>
+                    <p>Voted by Portland Food & Wine Magazine readers for exceptional quality and innovation in craft baking.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h4>Outstanding Small Business Award</h4>
+                    <p class="date">2021</p>
+                    <p>Recognized by the Portland Chamber of Commerce for community impact and sustainable business practices.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h4>Certified Master Baker</h4>
+                    <p class="date">2019</p>
+                    <p>Achieved Master Baker certification from the Retail Bakers of America, demonstrating advanced skills in all aspects of commercial baking.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
